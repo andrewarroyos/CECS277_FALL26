@@ -20,7 +20,7 @@ def menu():
     
 
 def main():
-    return
+    print("Working")
 
 
 main()
