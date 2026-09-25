@@ -1,6 +1,6 @@
 class Treasure:
     def __init__(self, _location):
-        self.location = _location
+        self._location = _location
     
     @property
     def location(self):
@@ -20,7 +20,7 @@ class Treasure:
         elif treasure_row > player_row:
             return "A treasure is south of you."
 
-        # If rows are equal, check horizontal direction
+        # If rows are equal -> check horizontal direction
         if treasure_column > player_column:
             return "A treasure is east of you."
         elif treasure_column < player_column:
