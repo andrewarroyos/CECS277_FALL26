@@ -1,7 +1,7 @@
 # Group 16
 # Andrew Arroyos
 # Michael Sena
-# Lab 5 - Class/Objects - Traps & Treasures
+# Lab 5 - Class/Objects - Traps & Treasures  
 
 import random
 import check_input
