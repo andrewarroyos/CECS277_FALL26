@@ -1,14 +1,14 @@
 # Contact class
 
 class Contact:
-    def __init__(self, first_name, last_name, phone_number, address, city, zip):
+    def __init__(self, first_name, last_name, phone_number, address, city, zip_code):
         """pass in the contact’s information and assign each one to its corresponding attribute."""
         self.first_name = first_name
         self.last_name = last_name
         self.phone_number = phone_number
         self.address = address
         self.city = city
-        self.zip = zip
+        self.zip_code = zip_code
         
     def __lt__(self, other):
         """passes in two contacts and returns a boolean value.
@@ -18,12 +18,12 @@ class Contact:
     
     def __str__(self):
         """returns a string that is used to display the contact to the console."""
-        return self.first_name + self.address
+        return self.first_name + " " + self.last_name + "\n" + self.phone_number + "\n" + self.city + " " + self.zip_code + "\n"
     
     def __repr__(self):
         """returns a string that is used to write the contact to the file in the
         format ‘f_name,l_name,phone,address,city,zip’"""
-        return self.first_name + "," + self.last_name + "," + self.phone_number + "," + self.address + "," + self.city + "," + self.zip
+        return self.first_name + "," + self.last_name + "," + self.phone_number + "," + self.address + "," + self.city + "," + self.zip_code + "\n"
         
     
 # TESTING      
