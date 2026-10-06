@@ -1,1 +1,5 @@
-main.py
+def main():
+  return
+
+
+main()

@@ -18,6 +18,7 @@ class Die:
         self._sides = sides
         self._value = 0
         
+        
     def roll(self):
         """
         generate a random number between 1 and the number of sides and assign it to value.
@@ -26,11 +27,13 @@ class Die:
         self._value = random.randint(1,self._sides)
         return self._value
     
+    
     def __str__(self):
         """
         return the Die's value as a string
         """
         return f"The die has a value of: {self._value}"
+    
     
     def __lt__(self, other):
         """
@@ -41,6 +44,7 @@ class Die:
         else:
             return False
         
+        
     def __eq__(self, other):
         """
         return true if the value of self is equal to the value of other
@@ -49,6 +53,7 @@ class Die:
             return True
         else:
             return False
+        
         
     def __sub__(self, other):
         """
