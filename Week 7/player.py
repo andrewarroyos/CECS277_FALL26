@@ -92,6 +92,5 @@ class Player:
         """
         returns a string in the format "D1=2, D2=4, D3=6"
         """
-        
         return f"D1={str(self._dice[0])}, D2={str(self._dice[1])}, D3={str(self._dice[2])}"
     

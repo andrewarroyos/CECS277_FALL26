@@ -7,7 +7,6 @@
     
 import random
 import check_input
-import math
 
 class Die:
     def __init__(self, sides=6):
@@ -32,7 +31,7 @@ class Die:
         """
         return the Die's value as a string
         """
-        return f"The die has a value of: {self._value}"
+        return str(self._value)
     
     
     def __lt__(self, other):
@@ -60,11 +59,5 @@ class Die:
         return the difference between the value of self and value of other
         (hint: take absolute value to always get a positive difference)
         """
-        return math.abs(self._value - other._value)
-        
-
-# Testing Die object    
-die1 = Die()
-die1.roll()
-print(die1)
+        return abs(self._value - other._value)
         
