@@ -4,7 +4,6 @@
 # Lab 7 - Class Relationships - Yahtzee
 
 import player
-import die
 import check_input
 
 def take_turn(player_object: player.Player):

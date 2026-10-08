@@ -1,14 +1,19 @@
-# Die class has two attributes:
+# Group 16
+# Andrew Arroyos
+# Michael Sena
+# Lab 7 - Class Relationships - Yahtzee
+  
+import random
+
+class Die:
+    """
+    # Die class has two attributes:
     # - number of sides of th die
     # - value of the rolled die
 
     # They should be named using a leading underscore.
     # They do not need property methods.
-    
-import random
-import check_input
-
-class Die:
+    """
     def __init__(self, sides=6):
         """
         passes in the number of sides of the die.

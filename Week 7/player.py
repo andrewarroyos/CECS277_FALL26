@@ -1,13 +1,17 @@
-"""
-Player class:
-    - has two attributes:
-        - a list of 3 Die objects
-        - player's points
-"""
+# Group 16
+# Andrew Arroyos
+# Michael Sena
+# Lab 7 - Class Relationships - Yahtzee
 
 import die
 
 class Player:
+    """
+    Player class:
+    - has two attributes:
+        - a list of 3 Die objects
+        - player's points
+    """
     def __init__(self):
         """
         constructs and sorts the list of three Die objects and then initializes the player's points to 0.
