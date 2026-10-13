@@ -17,6 +17,7 @@ def read_file():
             fname, lname, pnumber, address, city, zip_code = format_person
             contact_object = contact.Contact(fname, lname, pnumber, address, city, zip_code)
             filled_list.append(contact_object)
+        filled_list.sort()
     return filled_list
             
 def write_file(contacts_list):
@@ -74,7 +75,6 @@ def modify_contact(contact):
 
 def main():
     contacts_list = read_file()
-    contacts_list.sort()
 
     program_running = True
     while program_running:
