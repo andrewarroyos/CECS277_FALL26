@@ -16,3 +16,4 @@ class Exit(Room):
             return "You found the exit and escaped the dungeon!"
         else:
             return "You found the exit, but you need a key!"
+        

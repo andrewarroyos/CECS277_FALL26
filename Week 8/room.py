@@ -22,3 +22,4 @@ class Room:
         """
         self._character = "."
         return "There is nothing here."
+    
