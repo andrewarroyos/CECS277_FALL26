@@ -1,45 +1,98 @@
 # Player Class
 
 class Player:
-    def __init__(self) -> None:
+    """
+    Represents the player exploring the dungeon
+    """
+
+    def __init__(self):
         """
-        Player Attributes:
-            - hp: int
-            - gold: int
-            - key: int
-            - location: list
-            - escaped: bool
+        Initialize the players starting stats
         """
-        self.hp = 50
-        self.gold = 0
-        self.key = 0
-        self.location = [0,0]
-        self.escaped = False
+
+        self._hp = 50
+        self._gold = 0
+        self._key = 0
+        self._location = [0, 0]
+        self._escaped = False
     
+    @property
+    def hp(self):
+        """
+        Return the players current hp
+        """
+        return self._hp
     
-    def take_dmg(self, dmg: int) -> int:
+    @property
+    def gold(self):
         """
-        pass in the amount of damage and subtract it from the player's current HP. If HP is < 0,
-        then resest the HP to 0.
+        REturn the players current gold
         """
-        self.hp = self.hp - dmg
-        if self.hp < 0:
-            self.hp = 0
-        return self.hp
+        return self._gold
+    
+    @property
+    def key(self):
+        """
+        Return number of keys the player has 
+        """
+        return self._key
+    
+    @property
+    def location(self):
+        """
+        Return the players current location
+        """
+        return self._location
+    
+    @property
+    def escaped(self):
+        """
+        Return whether the player has escaped 
+        """
+        return self._escaped
+    
+    def take_dmg(self, dmg):
+        """
+        Subtract damage from the player's HP
+        """
+
+        self._hp -= dmg
+
+        if self._hp < 0:
+            self._hp = 0
+    
+    def inc_gold(self, g):
+        """
+        Increase the player's gold
+        """
+
+        self._gold += g
+
+    def inc_key(self):
+        """
+        Add one key to the player
+        """
+
+        self._key += 1
+    
+    def escape(self):
+        """
+        Set the players escaped status to True
+        """
+
+        self._escaped = True
+    
+    def move(self, add_row, add_col):
+        """ 
+        Move the player to a new location
+        """
         
-        
-    def inc_gold(self, g: int) -> int:
-        """
-        pass in an amount of gold and add it to the player's gold.
-        """
-        self.gold += g
-        return self.gold
+        self._location[0] += add_row
+        self._location[1] += add_col
     
-    
-    def inc_key(self) -> int:
+    def __str__(self):
         """
-        add 1 to the player's keys
+        Return a string containing the players stats
         """
-        self.key = 1
-        return self.key
+        return f"Player:\n HP = {self._hp}\n Gold = {self._gold}\n Keys = {self._key}"
         
