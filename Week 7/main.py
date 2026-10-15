@@ -29,7 +29,6 @@ def take_turn(player_object: player.Player):
   print(f"Score = {player_object.points}")
   
   
-
 def main():
   """
   The main function should:
