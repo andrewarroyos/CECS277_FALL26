@@ -41,7 +41,7 @@ class Entity(abc.ABC):
         """
         Display the entity's name and hp in the format in "Name: hp/max".
         """
-        return self._name + ": " + self._hp + "/" + self._max_hp
+        return f"{self._name}: {self._hp}/{self._max_hp}"
     
     
     # ABSTRACT METHODS
