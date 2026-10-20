@@ -1,6 +1,6 @@
 import abc
 
-class Entity:
+class Entity(abc.ABC):
     def __init__(self, name, max_hp):
         """
         1. __init__(self, name, max_hp) – set the _name, _max_hp, and _hp. Assign the
@@ -9,7 +9,23 @@ class Entity:
         self._name = name
         self._max_hp = max_hp
         self._hp = max_hp
+    
         
+    @property
+    def name(self):
+        """
+        Return name
+        """
+        return self._name
+    
+    
+    @property    
+    def hp(self):
+        """
+        Return hp
+        """
+        return self._hp
+    
         
     def take_damage(self, dmg):
         """
