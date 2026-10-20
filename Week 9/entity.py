@@ -1,4 +1,4 @@
-
+import abc
 
 class Entity:
     def __init__(self, name, max_hp):
@@ -28,6 +28,14 @@ class Entity:
         return self._name + ": " + self._hp + "/" + self._max_hp
     
     
+    # ABSTRACT METHODS
+    #=================
+    @abc.abstractmethod
+    def basic_attack(self, other):
+        pass
+        
+
+    @abc.abstractmethod
+    def special_attack(self, other):
+        pass
     
-        
-        
