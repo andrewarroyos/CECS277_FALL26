@@ -6,7 +6,6 @@ import email
 import phone
 
 class ValidationProcessor(abc.ABC):
-  
   @abc.abstractmethod
   def create_validator(self, field):
     """
@@ -23,18 +22,12 @@ class ValidationProcessor(abc.ABC):
     Update the record with the updated string.
     Return whether the string was valid and the record as a tuple.
     """
-    if field == 1:
-      validator = email.EmailValidator()
-    elif field == 2:
-      validator = phone.PhoneValidator()
-    else:
-      print("Invalid field choice.")
-      return (False, record)
+    # Create validator is passed to field.py version of "create_validator()"
+    validator = self.create_validator(field)
     
     clean_record = validator.clean(record)
     validity = validator.validate(clean_record)
-    record = clean_record
-    return (validity, record)
+    return (validity, clean_record)
     
       
        
