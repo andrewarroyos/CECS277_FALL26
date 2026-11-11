@@ -1,7 +1,7 @@
 # phone.py
 # - inherits from Validator
 
-class Phone:
+class PhoneValidator:
   
   def clean(self, value):
     """

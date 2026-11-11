@@ -2,7 +2,7 @@
 # - inherits from Validator
 import validator
 
-class Email(validator.Validator):
+class EmailValidator(validator.Validator):
   
   def clean(self, value):
     """

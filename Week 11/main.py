@@ -11,11 +11,10 @@ def main():
   # v = "1234567890"
   # print(p.clean(v))
   
-  e = email.Email()
+  e = email.EmailValidator()
   em1 = "  coKe@bUsIn eSs.com "
   cleaned = e.clean(em1)
   print(e.validate(cleaned))
-  
   
 
 main()
