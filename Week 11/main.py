@@ -5,6 +5,7 @@
 
 import phone
 import email
+import phone
 
 def main():
   # p = phone.Phone()
@@ -12,6 +13,7 @@ def main():
   # print(p.clean(v))
   
   e = email.EmailValidator()
+  p = phone.PhoneValidator()
   em1 = "  coKe@bUsIn eSs.com "
   cleaned = e.clean(em1)
   print(e.validate(cleaned))
