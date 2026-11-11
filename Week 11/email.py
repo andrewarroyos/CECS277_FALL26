@@ -27,5 +27,15 @@ class Email(validator.Validator):
     Check that there are no spaces in the string and there is only one '@'. If any of the parts of the email address are missing or are incorrect, return False
     Else, return True.
     """
+    if " " in value or value.count("@") != 1:
+      return False
     
-    return
+    name, domain = value.split("@")
+    parts = domain.split(".")
+    
+    if len(parts) != 2:
+      return False
+    
+    host, ext = parts
+    return name.isalnum() and host.isalnum() and ext.isalnum()
+    

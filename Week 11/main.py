@@ -13,6 +13,9 @@ def main():
   
   e = email.Email()
   em1 = "  coKe@bUsIn eSs.com "
-  print(e.clean(em1))
+  cleaned = e.clean(em1)
+  print(e.validate(cleaned))
+  
+  
 
 main()
