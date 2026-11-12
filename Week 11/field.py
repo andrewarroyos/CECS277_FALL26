@@ -3,8 +3,12 @@
 import processor
 import email
 import phone
-
+ 
 class FieldProcessor(processor.ValidationProcessor):
+  """
+  Concrete processor that creates the correct validator for a field.
+  """
+ 
   def create_validator(self, field):
     """
     1. 1=email, 2=phone

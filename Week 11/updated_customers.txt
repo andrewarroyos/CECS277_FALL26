@@ -1,0 +1,15 @@
+Alice Smith,alice@gmail.com,562-555-1234
+Bob Jones,bob@gmail.com,562-555-9876
+Carol White,carol@yahoo.com,562-555-1234
+David Lee,david@company.org,562-555-0167
+Frank Miller,frank@company.com,714-555-0123
+Grace Kim,gracekim@gmail.com,818-555-0120
+Henry Davis,henry@mail.com,562-555-0145
+Jack Wilson,jack@company.com,626-555-0199
+Liam Thompson,liam@domain.com,818-555-0101
+Maya Chen,mayachen@university.edu,310-555-0192
+Noah Martinez,noah@mail.com,310-555-0173
+Olivia Robins,olivia@shop.com,424-555-0184
+Parker Lewis,parker@mail.com,213-555-0195
+Riley Morgan,riley@news.org,213-555-0190
+Tyler Brooks,tyler@domain.com,323-555-0102
