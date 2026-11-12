@@ -6,6 +6,11 @@ import email
 import phone
 
 class ValidationProcessor(abc.ABC):
+  """
+  Abstract processor that creates a validator for a field
+  and uses it to clean and validate that field in a record.
+  """
+    
   @abc.abstractmethod
   def create_validator(self, field):
     """
@@ -25,10 +30,12 @@ class ValidationProcessor(abc.ABC):
     # Create validator is passed to field.py version of "create_validator()"
     validator = self.create_validator(field)
     
-    clean_record = validator.clean(record)
-    validity = validator.validate(clean_record)
-    return (validity, clean_record)
-    
+    # field number matches the record index (1 = email, 2 = phone)
+    cleaned_value = validator.clean(record[field])
+    record[field] = cleaned_value
+
+    is_valid = validator.validate(cleaned_value)
+    return (is_valid, record)
       
        
          

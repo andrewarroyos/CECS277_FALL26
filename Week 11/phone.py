@@ -31,15 +31,20 @@ class PhoneValidator(validator.Validator):
     return f"{formatted[:3]}-{formatted[3:6]}-{formatted[6:]}"
     
 
-def validate(self, value):
-  """
-  Passes in the cleaned string. 
-  If the phone number doesn't have exactly 10 digits or have other chars besides '-', return False.
-  Otherwise, return True.
-  """
-  if len(value) != 10:
-    # Other characters were already cleaned out in the clean() function.
-    return False
-  else:
-    return True
-      
+  def validate(self, value):
+    """
+    Passes in the cleaned string. 
+    If the phone number doesn't have exactly 10 digits or have other chars besides '-', return False.
+    Otherwise, return True.
+    """
+    # Must be 12 chars: 10 digits + 2 dashes
+    if len(value) != 12:
+      return False
+
+    # Dashes must be at positions 3 and 7
+    if value[3] != "-" or value[7] != "-":
+      return False
+
+    # Everything else must be a digit
+    return value.replace("-", "").isdigit()
+        
